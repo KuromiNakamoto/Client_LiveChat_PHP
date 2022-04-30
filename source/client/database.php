@@ -10,6 +10,7 @@ class _db {
 	public function connect() {
 		global $database;
 		$connection = mysqli_connect($database['host'], $database['user'], $database['pass'], $database['name']) or die("MÁY CHỦ ĐANG BẢO TRÌ !");
+		mysqli_set_charset($connection, "utf8");
 		return $connection;
 	}
 
