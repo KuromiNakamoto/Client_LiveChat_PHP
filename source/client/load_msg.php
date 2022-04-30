@@ -3,9 +3,12 @@ error_reporting(0);
 
 require("database.php");
 
-$truyvan = $db->query("SELECT * FROM `message` ORDER BY `id` DESC LIMIT 10");
-
 $count = $db->num_rows("SELECT * FROM `message`");
+
+$val1 = $count - 10;
+$val2 = $count;
+
+$truyvan = $db->query("SELECT * FROM `message` LIMIT ".$val1.",".$val2."");
 
 if ($count) {
 	while ($row = mysqli_fetch_assoc($truyvan)) {
