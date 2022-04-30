@@ -35,21 +35,6 @@ CREATE TABLE `message` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `message`
---
-
-INSERT INTO `message` (`id`, `username`, `message`, `time`) VALUES
-(1, 'admin', 'xd', '1651299869'),
-(2, 'admin', 'xd', '1651299870'),
-(3, 'admin', 'anh bạn à', '1651299875'),
-(4, 'admin2', 'anh bạn à', '1651299890'),
-(5, 'admin', 'test', '1651300901'),
-(6, 'admin', 'doremo', '1651300906'),
-(7, 'admin', 'xd', '1651300907'),
-(8, 'admin', 'xd', '1651300908'),
-(9, 'admin', 'xd', '1651300909');
-
---
 -- Chỉ mục cho các bảng đã đổ
 --
 
