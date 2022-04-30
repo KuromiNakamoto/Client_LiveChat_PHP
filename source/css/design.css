@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.content {
+	padding: 1rem;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	background-image: var(--data-bg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+}
+
+#chatbox {
+	width: 400px;
+	padding: 1rem;
+	background-color: #fff;
+	margin-top: 5rem;
+	border-radius: 3px;
+	box-shadow: 0 0 35px 5px rgba(0,0,0,0.3);
+}
+
+#chatbox #chatbox-title {
+	text-align: center;
+}
+
+#chatbox #msg-list {
+	padding: 0.5rem;
+	height: 288px;
+	overflow: auto;
+	margin-bottom: 1rem;
+	margin-top: 0.5rem;
+}
+
+#chatbox #msg-list .msg-box {
+	font-size: 14px;
+	padding: 0.45rem 0.75rem;
+	margin-top: 0.25rem;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	border-radius: 3px;
+	cursor: pointer;
+	color: #5a6268;
+	transition: opacity 0.3s;
+}
+
+#chatbox #msg-list .msg-box .msg-box-user {
+	color: #6c757d;
+}
+
+#chatbox #msg-list .msg-box:hover {
+	opacity: 0.6;
+}
+
+#chatbox #msg-send {
+	display: flex;
+}
+
+#chatbox #msg-sendbox {
+	display: inline-block;
+	width: 100%;
+	padding: 0.45rem 0.75rem;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	outline: none;
+	transition: border-color 0.3s;
+	margin-right: .25rem;
+}
+
+#chatbox #msg-sendbox::placeholder {
+	transition: color 0.3s;
+}
+
+#chatbox #msg-sendbox:hover {
+	border-color: #AEAEAE;
+}
+
+#chatbox #msg-sendbox:focus {
+	border-color: #007bff;
+}
+
+#chatbox #msg-sendbutton {
+	display: inline-block;
+	float: right;
+	padding: 0.45rem 0.75rem;
+	cursor: pointer;
+	border-radius: 3px;
+	border: 1px solid #6c757d;
+	background-color: #6c757d;
+	color: #fff;
+	transition: background-color .3s, border-color .3s;
+}
+
+#chatbox #msg-sendbutton:not(:disabled):hover {
+	background-color: #5a6268;
+	border-color: #545b62;
+}
+
+#chatbox #msg-sendbutton:disabled {
+	opacity: 0.8;
+	cursor: auto;
+}
+
+#chatbox #msg-sendbox:focus::placeholder {
+	color: #007bff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(0,0,0,0.5);
+}
