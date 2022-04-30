@@ -3,7 +3,7 @@ error_reporting(0);
 
 require("database.php");
 
-$truyvan = $db->query("SELECT * FROM `message`");
+$truyvan = $db->query("SELECT * FROM `message` ORDER BY `id` DESC LIMIT 10");
 
 $count = $db->num_rows("SELECT * FROM `message`");
 
